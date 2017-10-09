@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		146637AE1F8B4E9600DD1045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146637AD1F8B4E9600DD1045 /* AppDelegate.swift */; };
+		146637B01F8B4E9600DD1045 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146637AF1F8B4E9600DD1045 /* ViewController.swift */; };
+		146637B31F8B4E9600DD1045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146637B11F8B4E9600DD1045 /* Main.storyboard */; };
+		146637B51F8B4E9600DD1045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146637B41F8B4E9600DD1045 /* Assets.xcassets */; };
+		146637B81F8B4E9600DD1045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146637B61F8B4E9600DD1045 /* LaunchScreen.storyboard */; };
+		146637DC1F8B5ED100DD1045 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 146637DB1F8B5EC300DD1045 /* Inceptionv3.mlmodel */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		146637BF1F8B4E9600DD1045 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146637A21F8B4E9500DD1045 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 146637A91F8B4E9500DD1045;
+			remoteInfo = "Simple Image Recognition App";
+		};
+		146637CA1F8B4E9600DD1045 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146637A21F8B4E9500DD1045 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 146637A91F8B4E9500DD1045;
+			remoteInfo = "Simple Image Recognition App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		146637AA1F8B4E9500DD1045 /* Simple Image Recognition App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Image Recognition App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		146637AD1F8B4E9600DD1045 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		146637AF1F8B4E9600DD1045 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		146637B21F8B4E9600DD1045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		146637B41F8B4E9600DD1045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		146637B71F8B4E9600DD1045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		146637B91F8B4E9600DD1045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		146637BE1F8B4E9600DD1045 /* Simple Image Recognition AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple Image Recognition AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		146637C91F8B4E9600DD1045 /* Simple Image Recognition AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple Image Recognition AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		146637DB1F8B5EC300DD1045 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		146637A71F8B4E9500DD1045 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146637BB1F8B4E9600DD1045 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146637C61F8B4E9600DD1045 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		146637A11F8B4E9500DD1045 = {
+			isa = PBXGroup;
+			children = (
+				146637DB1F8B5EC300DD1045 /* Inceptionv3.mlmodel */,
+				146637AC1F8B4E9500DD1045 /* Simple Image Recognition App */,
+				146637AB1F8B4E9500DD1045 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		146637AB1F8B4E9500DD1045 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				146637AA1F8B4E9500DD1045 /* Simple Image Recognition App.app */,
+				146637BE1F8B4E9600DD1045 /* Simple Image Recognition AppTests.xctest */,
+				146637C91F8B4E9600DD1045 /* Simple Image Recognition AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		146637AC1F8B4E9500DD1045 /* Simple Image Recognition App */ = {
+			isa = PBXGroup;
+			children = (
+				146637AD1F8B4E9600DD1045 /* AppDelegate.swift */,
+				146637AF1F8B4E9600DD1045 /* ViewController.swift */,
+				146637B11F8B4E9600DD1045 /* Main.storyboard */,
+				146637B41F8B4E9600DD1045 /* Assets.xcassets */,
+				146637B61F8B4E9600DD1045 /* LaunchScreen.storyboard */,
+				146637B91F8B4E9600DD1045 /* Info.plist */,
+			);
+			path = "Simple Image Recognition App";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		146637A91F8B4E9500DD1045 /* Simple Image Recognition App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 146637D21F8B4E9600DD1045 /* Build configuration list for PBXNativeTarget "Simple Image Recognition App" */;
+			buildPhases = (
+				146637A61F8B4E9500DD1045 /* Sources */,
+				146637A71F8B4E9500DD1045 /* Frameworks */,
+				146637A81F8B4E9500DD1045 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Simple Image Recognition App";
+			productName = "Simple Image Recognition App";
+			productReference = 146637AA1F8B4E9500DD1045 /* Simple Image Recognition App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		146637BD1F8B4E9600DD1045 /* Simple Image Recognition AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 146637D51F8B4E9600DD1045 /* Build configuration list for PBXNativeTarget "Simple Image Recognition AppTests" */;
+			buildPhases = (
+				146637BA1F8B4E9600DD1045 /* Sources */,
+				146637BB1F8B4E9600DD1045 /* Frameworks */,
+				146637BC1F8B4E9600DD1045 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				146637C01F8B4E9600DD1045 /* PBXTargetDependency */,
+			);
+			name = "Simple Image Recognition AppTests";
+			productName = "Simple Image Recognition AppTests";
+			productReference = 146637BE1F8B4E9600DD1045 /* Simple Image Recognition AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		146637C81F8B4E9600DD1045 /* Simple Image Recognition AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 146637D81F8B4E9600DD1045 /* Build configuration list for PBXNativeTarget "Simple Image Recognition AppUITests" */;
+			buildPhases = (
+				146637C51F8B4E9600DD1045 /* Sources */,
+				146637C61F8B4E9600DD1045 /* Frameworks */,
+				146637C71F8B4E9600DD1045 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				146637CB1F8B4E9600DD1045 /* PBXTargetDependency */,
+			);
+			name = "Simple Image Recognition AppUITests";
+			productName = "Simple Image Recognition AppUITests";
+			productReference = 146637C91F8B4E9600DD1045 /* Simple Image Recognition AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		146637A21F8B4E9500DD1045 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = wsq;
+				TargetAttributes = {
+					146637A91F8B4E9500DD1045 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					146637BD1F8B4E9600DD1045 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 146637A91F8B4E9500DD1045;
+					};
+					146637C81F8B4E9600DD1045 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 146637A91F8B4E9500DD1045;
+					};
+				};
+			};
+			buildConfigurationList = 146637A51F8B4E9500DD1045 /* Build configuration list for PBXProject "Simple Image Recognition App" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 146637A11F8B4E9500DD1045;
+			productRefGroup = 146637AB1F8B4E9500DD1045 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				146637A91F8B4E9500DD1045 /* Simple Image Recognition App */,
+				146637BD1F8B4E9600DD1045 /* Simple Image Recognition AppTests */,
+				146637C81F8B4E9600DD1045 /* Simple Image Recognition AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		146637A81F8B4E9500DD1045 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146637B81F8B4E9600DD1045 /* LaunchScreen.storyboard in Resources */,
+				146637B51F8B4E9600DD1045 /* Assets.xcassets in Resources */,
+				146637B31F8B4E9600DD1045 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146637BC1F8B4E9600DD1045 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146637C71F8B4E9600DD1045 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		146637A61F8B4E9500DD1045 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146637B01F8B4E9600DD1045 /* ViewController.swift in Sources */,
+				146637DC1F8B5ED100DD1045 /* Inceptionv3.mlmodel in Sources */,
+				146637AE1F8B4E9600DD1045 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146637BA1F8B4E9600DD1045 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146637C51F8B4E9600DD1045 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		146637C01F8B4E9600DD1045 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 146637A91F8B4E9500DD1045 /* Simple Image Recognition App */;
+			targetProxy = 146637BF1F8B4E9600DD1045 /* PBXContainerItemProxy */;
+		};
+		146637CB1F8B4E9600DD1045 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 146637A91F8B4E9500DD1045 /* Simple Image Recognition App */;
+			targetProxy = 146637CA1F8B4E9600DD1045 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		146637B11F8B4E9600DD1045 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				146637B21F8B4E9600DD1045 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		146637B61F8B4E9600DD1045 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				146637B71F8B4E9600DD1045 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		146637D01F8B4E9600DD1045 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		146637D11F8B4E9600DD1045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		146637D31F8B4E9600DD1045 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Simple Image Recognition App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "www.Simple-Image-Recognition-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		146637D41F8B4E9600DD1045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Simple Image Recognition App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "www.Simple-Image-Recognition-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		146637D61F8B4E9600DD1045 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Simple Image Recognition AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "www.Simple-Image-Recognition-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simple Image Recognition App.app/Simple Image Recognition App";
+			};
+			name = Debug;
+		};
+		146637D71F8B4E9600DD1045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Simple Image Recognition AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "www.Simple-Image-Recognition-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simple Image Recognition App.app/Simple Image Recognition App";
+			};
+			name = Release;
+		};
+		146637D91F8B4E9600DD1045 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Simple Image Recognition AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "www.Simple-Image-Recognition-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Simple Image Recognition App";
+			};
+			name = Debug;
+		};
+		146637DA1F8B4E9600DD1045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Simple Image Recognition AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "www.Simple-Image-Recognition-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Simple Image Recognition App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		146637A51F8B4E9500DD1045 /* Build configuration list for PBXProject "Simple Image Recognition App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146637D01F8B4E9600DD1045 /* Debug */,
+				146637D11F8B4E9600DD1045 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		146637D21F8B4E9600DD1045 /* Build configuration list for PBXNativeTarget "Simple Image Recognition App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146637D31F8B4E9600DD1045 /* Debug */,
+				146637D41F8B4E9600DD1045 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		146637D51F8B4E9600DD1045 /* Build configuration list for PBXNativeTarget "Simple Image Recognition AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146637D61F8B4E9600DD1045 /* Debug */,
+				146637D71F8B4E9600DD1045 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		146637D81F8B4E9600DD1045 /* Build configuration list for PBXNativeTarget "Simple Image Recognition AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146637D91F8B4E9600DD1045 /* Debug */,
+				146637DA1F8B4E9600DD1045 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 146637A21F8B4E9500DD1045 /* Project object */;
+}
