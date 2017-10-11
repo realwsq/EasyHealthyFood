@@ -25,7 +25,8 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
 //        print(self.items[indexPath.item])
 //        print(type(of: cell.myLabel))
         
-        cell.displayContent(title: self.items[indexPath.item])
+//        cell.displayContent(title: self.items[indexPath.item])
+        cell.displayContent()
 
 //        cell.backgroundColor = UIColor.cyan // make cell more visible in our example project
         

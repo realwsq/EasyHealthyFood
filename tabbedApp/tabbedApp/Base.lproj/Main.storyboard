@@ -45,38 +45,34 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XyJ-rF-u8M">
-                                    <size key="itemSize" width="270" height="50"/>
+                                    <size key="itemSize" width="270" height="485"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="5VH-JO-dKw" customClass="CollectionViewCell" customModule="tabbedApp" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="0.0" width="270" height="50"/>
+                                        <rect key="frame" x="25" y="0.0" width="270" height="485"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="270" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="270" height="485"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPl-5I-gWC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="42" id="oNC-EI-U9M"/>
-                                                        <constraint firstAttribute="height" constant="21" id="q0n-qV-BpD"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6SM-f7-dwc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="270" height="485"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="WPl-5I-gWC" firstAttribute="leading" secondItem="5VH-JO-dKw" secondAttribute="leadingMargin" id="3uD-hB-vTC"/>
-                                            <constraint firstItem="WPl-5I-gWC" firstAttribute="top" secondItem="5VH-JO-dKw" secondAttribute="topMargin" id="BOS-E5-bwb"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="6SM-f7-dwc" secondAttribute="trailing" id="5Qk-d2-AFb"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="6SM-f7-dwc" secondAttribute="bottom" id="O1o-ai-4D8"/>
+                                            <constraint firstItem="6SM-f7-dwc" firstAttribute="leading" secondItem="5VH-JO-dKw" secondAttribute="leadingMargin" id="fnY-fs-BLT"/>
+                                            <constraint firstItem="6SM-f7-dwc" firstAttribute="top" secondItem="5VH-JO-dKw" secondAttribute="topMargin" id="igA-NL-eHl"/>
                                         </constraints>
-                                        <size key="customSize" width="270" height="50"/>
+                                        <size key="customSize" width="270" height="485"/>
                                         <connections>
-                                            <outlet property="myLabel" destination="WPl-5I-gWC" id="pAc-uN-dAX"/>
+                                            <outlet property="chartView" destination="6SM-f7-dwc" id="QU5-d6-dQB"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
