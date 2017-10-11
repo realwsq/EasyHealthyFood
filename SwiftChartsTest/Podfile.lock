@@ -1,0 +1,21 @@
+PODS:
+  - SwiftCharts (0.6)
+
+DEPENDENCIES:
+  - SwiftCharts (from `https://github.com/i-schuetz/SwiftCharts.git`)
+
+EXTERNAL SOURCES:
+  SwiftCharts:
+    :git: https://github.com/i-schuetz/SwiftCharts.git
+
+CHECKOUT OPTIONS:
+  SwiftCharts:
+    :commit: 6c9bed2534d0e9c2319e5c003a5f7e0461df6ff7
+    :git: https://github.com/i-schuetz/SwiftCharts.git
+
+SPEC CHECKSUMS:
+  SwiftCharts: 84f84c2a94a3f51f055eeaacd9b8dc3ada3380eb
+
+PODFILE CHECKSUM: bed71acda9d20f0d791b4843444f97414561539c
+
+COCOAPODS: 1.3.1
