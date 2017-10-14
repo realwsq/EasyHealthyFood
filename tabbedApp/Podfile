@@ -6,6 +6,6 @@ target 'tabbedApp' do
   use_frameworks!
 
   # Pods for tabbedApp
-pod 'SwiftCharts', :git => 'https://github.com/i-schuetz/SwiftCharts.git'
-
+  # pod 'SwiftCharts', :git => 'https://github.com/i-schuetz/SwiftCharts.git'
+pod 'Charts'
 end

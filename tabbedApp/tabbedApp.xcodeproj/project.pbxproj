@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146F03A81F909EAB0030BCCA /* SelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F03A71F909EAB0030BCCA /* SelectTableViewController.swift */; };
+		146F03AA1F919CD50030BCCA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F03A91F919CD50030BCCA /* MainViewController.swift */; };
 		14B4D6C51F8DED8400AE1A0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B4D6C41F8DED8400AE1A0C /* AppDelegate.swift */; };
 		14B4D6C71F8DED8400AE1A0C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B4D6C61F8DED8400AE1A0C /* FirstViewController.swift */; };
 		14B4D6C91F8DED8400AE1A0C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B4D6C81F8DED8400AE1A0C /* SecondViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		146F03A71F909EAB0030BCCA /* SelectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTableViewController.swift; sourceTree = "<group>"; };
+		146F03A91F919CD50030BCCA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		14B4D6C11F8DED8300AE1A0C /* tabbedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tabbedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B4D6C41F8DED8400AE1A0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14B4D6C61F8DED8400AE1A0C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				14B4D6C61F8DED8400AE1A0C /* FirstViewController.swift */,
 				14B4D6C81F8DED8400AE1A0C /* SecondViewController.swift */,
 				14B4D6DA1F8DFEB300AE1A0C /* CollectionViewCell.swift */,
+				146F03A91F919CD50030BCCA /* MainViewController.swift */,
+				146F03A71F909EAB0030BCCA /* SelectTableViewController.swift */,
 				14B4D6CA1F8DED8400AE1A0C /* Main.storyboard */,
 				14B4D6CD1F8DED8400AE1A0C /* Assets.xcassets */,
 				14B4D6CF1F8DED8400AE1A0C /* LaunchScreen.storyboard */,
@@ -208,11 +214,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-tabbedApp/Pods-tabbedApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftCharts/SwiftCharts.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCharts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -226,11 +232,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				146F03AA1F919CD50030BCCA /* MainViewController.swift in Sources */,
 				14B4D6DB1F8DFEB400AE1A0C /* CollectionViewCell.swift in Sources */,
 				14B4D6C91F8DED8400AE1A0C /* SecondViewController.swift in Sources */,
 				14B4D6D91F8DEFA600AE1A0C /* Inceptionv3.mlmodel in Sources */,
 				14B4D6C51F8DED8400AE1A0C /* AppDelegate.swift in Sources */,
 				14B4D6C71F8DED8400AE1A0C /* FirstViewController.swift in Sources */,
+				146F03A81F909EAB0030BCCA /* SelectTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,12 +18,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ME8-uX-8EQ">
-                                <rect key="frame" x="11" y="135" width="299" height="299"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ME8-uX-8EQ">
+                                <rect key="frame" x="10.5" y="134.5" width="299" height="299"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="299" id="RYq-m5-8oq"/>
+                                    <constraint firstAttribute="width" constant="299" id="XsA-6k-Yu1"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAh-6Z-E8g">
+                                <rect key="frame" x="137" y="489" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="takephotobuttonWith_sender:" destination="9pv-A4-QxB" eventType="touchUpInside" id="fYK-K8-5Ui"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odj-UW-nqq">
+                                <rect key="frame" x="278" y="489" width="42" height="30"/>
+                                <state key="normal" title="return"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rAh-6Z-E8g" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="8HW-bO-nmy"/>
+                            <constraint firstItem="Odj-UW-nqq" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="U9u-91-IBD"/>
+                            <constraint firstItem="ME8-uX-8EQ" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="gKT-oU-WjI"/>
+                            <constraint firstItem="ME8-uX-8EQ" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="gfb-gy-wTd"/>
+                            <constraint firstItem="Odj-UW-nqq" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="yO2-vt-Hyz"/>
+                            <constraint firstItem="rAh-6Z-E8g" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="yVn-es-LdL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="featured" id="acW-dT-cKf"/>
@@ -40,9 +63,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="46u-Za-UzA">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="46u-Za-UzA">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XyJ-rF-u8M">
                                     <size key="itemSize" width="270" height="485"/>
@@ -52,27 +74,27 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="5VH-JO-dKw" customClass="CollectionViewCell" customModule="tabbedApp" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="0.0" width="270" height="485"/>
+                                        <rect key="frame" x="25" y="0.0" width="270" height="140"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="270" height="485"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="270" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6SM-f7-dwc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="270" height="485"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6SM-f7-dwc" customClass="LineChartView" customModule="Charts">
+                                                    <rect key="frame" x="0.0" y="0.0" width="270" height="140"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="trailingMargin" secondItem="6SM-f7-dwc" secondAttribute="trailing" id="5Qk-d2-AFb"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="6SM-f7-dwc" secondAttribute="bottom" id="O1o-ai-4D8"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="6SM-f7-dwc" secondAttribute="baseline" id="O1o-ai-4D8" userLabel="bottomMargin = Label.bottom"/>
                                             <constraint firstItem="6SM-f7-dwc" firstAttribute="leading" secondItem="5VH-JO-dKw" secondAttribute="leadingMargin" id="fnY-fs-BLT"/>
                                             <constraint firstItem="6SM-f7-dwc" firstAttribute="top" secondItem="5VH-JO-dKw" secondAttribute="topMargin" id="igA-NL-eHl"/>
                                         </constraints>
-                                        <size key="customSize" width="270" height="485"/>
+                                        <size key="customSize" width="270" height="140"/>
                                         <connections>
-                                            <outlet property="chartView" destination="6SM-f7-dwc" id="QU5-d6-dQB"/>
+                                            <outlet property="chtChart" destination="6SM-f7-dwc" id="bko-r0-S46"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -83,6 +105,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="46u-Za-UzA" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="5e3-st-Rux"/>
+                            <constraint firstItem="46u-Za-UzA" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="9nv-QR-PwK"/>
+                            <constraint firstAttribute="bottom" secondItem="46u-Za-UzA" secondAttribute="bottom" id="hiU-6d-WF0"/>
+                            <constraint firstItem="46u-Za-UzA" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="nHm-FV-KYZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
@@ -90,6 +118,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="359.15492957746477"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="u6f-zF-WVf">
+            <objects>
+                <viewController id="Ql2-La-eiR" customClass="MainViewController" customModule="tabbedApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UTi-vQ-UFj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fex-Q4-a4v" customClass="RadarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PfE-7r-zER" firstAttribute="trailing" secondItem="Fex-Q4-a4v" secondAttribute="trailing" id="0NF-0S-fdo"/>
+                            <constraint firstItem="PfE-7r-zER" firstAttribute="bottom" secondItem="Fex-Q4-a4v" secondAttribute="bottom" id="Jpv-XT-rrY"/>
+                            <constraint firstItem="Fex-Q4-a4v" firstAttribute="top" secondItem="UTi-vQ-UFj" secondAttribute="top" id="nUt-CM-4eW"/>
+                            <constraint firstItem="Fex-Q4-a4v" firstAttribute="leading" secondItem="PfE-7r-zER" secondAttribute="leading" id="zZt-SS-AvK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PfE-7r-zER"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="U3b-Wb-uha"/>
+                    <connections>
+                        <outlet property="chtChart" destination="Fex-Q4-a4v" id="72Z-En-Gqv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yKz-PH-EBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1927" y="73"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -103,6 +162,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="Ql2-La-eiR" kind="relationship" relationship="viewControllers" id="eGE-xI-ibn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
