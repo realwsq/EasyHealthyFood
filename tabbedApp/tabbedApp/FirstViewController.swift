@@ -87,7 +87,8 @@ class FirstViewController: UIViewController, UINavigationControllerDelegate, AVC
 //        takephotobutton.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
 //        takephotobutton.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         takephotobutton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        takephotobutton.center.x = self.view.center.x
+//        takephotobutton.center.x = self.view.center.x
+        takephotobutton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
     fileprivate func setupIdentifierConfirmbutton() {
         view.addSubview(confirmbutton)
@@ -131,11 +132,18 @@ class FirstViewController: UIViewController, UINavigationControllerDelegate, AVC
     
     @IBAction func takephototapped(_sender: Any) {
         self.photoresults.append(self.results)
+//        print("for simple test")
 //        print(self.photoresults)
     }
     @IBAction func confirmtapped(_sender: Any) {
-//        self.photoresults.append(self.results)
-        print(self.photoresults)
+//        print(self.photoresults)
+//        print("hello")
+        
+        //实例化一个登陆界面
+        let loginView = SelectTableViewController()
+        loginView.photoClassifierResults = photoresults
+        //从下弹出一个界面作为登陆界面，completion作为闭包，可以写一些弹出loginView时的一些操作
+        self.present(loginView, animated: true, completion: nil)
         
     }
     

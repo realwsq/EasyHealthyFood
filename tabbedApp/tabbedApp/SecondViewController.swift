@@ -19,14 +19,6 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! CollectionViewCell
         
-        
-//        print(type(of: cell))
-//        print(indexPath)
-//        print(indexPath.item)
-//        print(self.items[indexPath.item])
-//        print(type(of: cell.myLabel))
-        
-//        cell.displayContent(title: self.items[indexPath.item])
         var fakedata : [Double] = []
         for i in 0..<indexPath.item+5 {
             fakedata.append(Double(i)+0.5)

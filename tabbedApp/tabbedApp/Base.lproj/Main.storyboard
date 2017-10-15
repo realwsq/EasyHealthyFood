@@ -31,11 +31,15 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="takephotobuttonWith_sender:" destination="9pv-A4-QxB" eventType="touchUpInside" id="fYK-K8-5Ui"/>
+                                    <action selector="takephototappedWith_sender:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="vaw-BD-hXE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odj-UW-nqq">
                                 <rect key="frame" x="278" y="489" width="42" height="30"/>
                                 <state key="normal" title="return"/>
+                                <connections>
+                                    <action selector="confirmtappedWith_sender:" destination="9pv-A4-QxB" eventType="touchUpInside" id="O1T-5K-8JN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -149,6 +153,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yKz-PH-EBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1927" y="73"/>
+        </scene>
+        <!--Select Table View Controller-->
+        <scene sceneID="bzj-x0-bhS">
+            <objects>
+                <tableViewController id="E9g-aI-0H3" customClass="SelectTableViewController" customModule="tabbedApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lCh-ST-B5y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" id="pnB-Os-DBh">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pnB-Os-DBh" id="WoI-3I-tol">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="E9g-aI-0H3" id="yIr-n0-liX"/>
+                            <outlet property="delegate" destination="E9g-aI-0H3" id="jMm-UQ-TeF"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RFv-K0-X68" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2942" y="-223"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
