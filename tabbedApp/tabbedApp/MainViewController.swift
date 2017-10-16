@@ -22,6 +22,10 @@ class MainViewController: UIViewController {
         }
     }
     
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,6 +47,12 @@ class MainViewController: UIViewController {
         
         let data = RadarChartData() //This is the object that will be added to the chart
         data.addDataSet(line1) //Adds the line to the dataSet
+        
+//        print(data)
+        
+//        let chtChart = RadarChartView()
+//
+//        view.addSubview(chtChart)
         
         
         chtChart.data = data //finally - it adds the chart data to the chart and causes an update

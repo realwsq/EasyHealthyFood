@@ -18,27 +18,21 @@ class SelectTableViewController: UITableViewController {
     private let footerId = "footerId"
     private let cellId = "cellId"
     
-    let backbutton: UIButton = {
-        let btn = UIButton(type: .system)
-        btn.setTitle("back", for: .normal)
-        btn.addTarget(self, action: #selector(backtapped), for: .touchUpInside)
-        
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        return btn
-    }()
-    
-    fileprivate func setupIdentifierBackbutton() {
-        view.addSubview(backbutton)
-        backbutton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 500).isActive = true
-//        backbutton.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-//        backbutton.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        backbutton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        backbutton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-    }
     
     @IBAction func backtapped(_sender: Any) {
         print("back tapped")
+        
         self.dismiss(animated: true, completion: nil)
+        //实例化一个登陆界面
+//        let loginView = MainViewController()
+//        loginView.photoClassifierResults = photoresults
+        //从下弹出一个界面作为登陆界面，completion作为闭包，可以写一些弹出loginView时的一些操作
+        
+        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let loginView = storyboard.instantiateViewController(withIdentifier: "MainViewController")
+
+//        self.present(loginView, animated: true, completion: nil)
         
     }
     
@@ -52,7 +46,7 @@ class SelectTableViewController: UITableViewController {
     //
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        return 150
+        return 10
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -66,12 +60,24 @@ class SelectTableViewController: UITableViewController {
     //
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         
-        return 150
+        return 50
     }
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
         let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: footerId) as! CustomTableViewFooter
+        
+        let nbtn = UIButton(frame: CGRect(x: 0, y: 0, width: Int(self.view.frame.width), height: Int(50)))
+        nbtn.backgroundColor = .blue
+        nbtn.setTitle("back", for: .normal)
+        nbtn.translatesAutoresizingMaskIntoConstraints = false
+//        nbtn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        nbtn.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        nbtn.addTarget(self, action: #selector(SelectTableViewController.backtapped), for: .touchUpInside)
+        
+        footer.addSubview(nbtn)
+        print(nbtn)
+        
         return footer
     }
     
@@ -79,6 +85,7 @@ class SelectTableViewController: UITableViewController {
     // MARK :- CELL
     //
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("\n\n\n\n")
         print(photoClassifierResults)
         if photoClassifierResults == nil {
             return 0
@@ -99,19 +106,29 @@ class SelectTableViewController: UITableViewController {
             return cell
         }
         guard let results = photoClassifierResults![indexPath.item] as? [VNClassificationObservation] else { return cell}
-        guard let firstObservation = results.first else { return cell}
-        let text = firstObservation.identifier + " " + String(firstObservation.confidence)
-        print(text)
-        //Programmatically create label
-        let newLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 150))
-//        newLabel.backgroundColor = .red
-//        newLabel.font = UIFont(name: "Avenir", size: 17.0)
-        newLabel.textColor = .blue
-        newLabel.text = text
-        cell.addSubview(newLabel)
-        print(newLabel)
+        
+        decorateCell(cell: cell, results: results)
         
         return cell
+    }
+    
+    func decorateCell(cell : CustomTableCell!, results : [VNClassificationObservation]){
+//        guard let firstObservation = results.first else { return }
+//        var firstObsId = firstObservation.identifier
+       
+        for i in 0..<3 {
+//            var observation = results[i]
+//            var identifier = observation.identifier
+            guard let firstObservation = results.first else { return }
+            var identifier = firstObservation.identifier
+            
+            let nbtn = UIButton(frame: CGRect(x: 0, y: 50*i, width: Int(self.view.frame.width), height: 50))
+            nbtn.backgroundColor = .yellow
+            nbtn.setTitle(identifier, for: .normal)
+            
+            cell.addSubview(nbtn)
+            print(nbtn)
+        }
     }
     
     override func viewDidLoad() {
@@ -120,7 +137,7 @@ class SelectTableViewController: UITableViewController {
         title = "TableView Demo"
         view.backgroundColor = .white
         setupTableView()
-        setupIdentifierBackbutton()
+//        setupIdentifierBackbutton()
     }
     
     func setupTableView() {
@@ -130,61 +147,6 @@ class SelectTableViewController: UITableViewController {
         tableView.register(CustomTableViewFooter.self, forHeaderFooterViewReuseIdentifier: footerId)
         tableView.register(CustomTableCell.self, forCellReuseIdentifier: cellId)
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -199,7 +161,7 @@ class CustomTableViewHeader: UITableViewHeaderFooterView {
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         
-        contentView.backgroundColor = .white
+        contentView.backgroundColor = .blue
     }
     
 
@@ -217,7 +179,7 @@ class CustomTableViewFooter: UITableViewHeaderFooterView {
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         
-        contentView.backgroundColor = .green
+        contentView.backgroundColor = .white
     }
     
     required init?(coder aDecoder: NSCoder) {

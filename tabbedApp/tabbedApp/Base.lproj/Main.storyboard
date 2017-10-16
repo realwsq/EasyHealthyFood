@@ -53,13 +53,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--Second-->
+        <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="tabbedApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,13 +117,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="359.15492957746477"/>
         </scene>
-        <!--Item-->
+        <!--Main View Controller-->
         <scene sceneID="u6f-zF-WVf">
             <objects>
                 <viewController id="Ql2-La-eiR" customClass="MainViewController" customModule="tabbedApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -145,7 +145,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PfE-7r-zER"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="U3b-Wb-uha"/>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="U3b-Wb-uha"/>
                     <connections>
                         <outlet property="chtChart" destination="Fex-Q4-a4v" id="72Z-En-Gqv"/>
                     </connections>
@@ -192,9 +192,9 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
+                        <segue destination="Ql2-La-eiR" kind="relationship" relationship="viewControllers" id="eGE-xI-ibn"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="Ql2-La-eiR" kind="relationship" relationship="viewControllers" id="eGE-xI-ibn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -202,7 +202,4 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="second" width="30" height="30"/>
-    </resources>
 </document>
