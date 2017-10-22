@@ -25,7 +25,7 @@ class CollectionViewCell: UICollectionViewCell {
         }
     }
     func displayContent(origindata: [Double], label: String) {
-        
+        print("???")
 //        let chartConfig = ChartConfigXY(
 //            xAxisConfig: ChartAxisConfig(from: 2, to: 14, by: 2),
 //            yAxisConfig: ChartAxisConfig(from: 0, to: 14, by: 2)
@@ -62,6 +62,7 @@ class CollectionViewCell: UICollectionViewCell {
         let data = LineChartData() //This is the object that will be added to the chart
         data.addDataSet(line1) //Adds the line to the dataSet
         
+        print(chtChart.data)
         
         chtChart.data = data //finally - it adds the chart data to the chart and causes an update
         chtChart.chartDescription?.text = "My awesome chart" // Here we set the description for the graph
